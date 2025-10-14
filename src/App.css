@@ -1,0 +1,12 @@
+/* App.css */
+.App {
+  background-image: url('https://i.pinimg.com/originals/1c/3b/7e/1c3b7e2f4f0d1e4f4e4f4e4f4e4f4e4f.jpg');  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+
+/* Additional styles can be added here */   
+

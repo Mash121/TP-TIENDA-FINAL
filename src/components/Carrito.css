@@ -1,0 +1,83 @@
+.carrito-container {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: transparent; /* sin recuadro blanco */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carrito-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #fff; /* cambiá a #222 si tu fondo es claro */
+}
+
+.carrito-vacio {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.carrito-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  justify-items: center;
+}
+
+/* --- Tarjetas del carrito --- */
+.carrito-card {
+  background: rgba(255, 255, 255, 0.15); /* transparencia */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.carrito-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.carrito-imagen {
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.carrito-nombre {
+  font-size: 1rem;
+  text-align: center;
+  color: #fff; /* o #222 si fondo claro */
+  margin-bottom: 5px;
+}
+
+.carrito-precio {
+  font-weight: bold;
+  color: #4fc3f7;
+  margin-bottom: 10px;
+}
+
+.carrito-eliminar {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.carrito-eliminar:hover {
+  background-color: #d9363e;
+}
