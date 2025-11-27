@@ -1,6 +1,6 @@
 const Moda = () => {
   return(
-    <h1>Moda</h1>
+    <h1>Proximos lanzamientos</h1>
   );
 }
 

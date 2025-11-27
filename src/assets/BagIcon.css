@@ -1,0 +1,20 @@
+.bag-container {
+  position: relative;
+  display: inline-block;
+}
+
+.contador {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: red;
+  color: white;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+}

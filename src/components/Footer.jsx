@@ -1,4 +1,4 @@
-// Se pide para la pre-entrega
+
 import styles from './footer.module.css';
 
 const Footer = () => {
@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      {/* Seccion de enlaces */}
+    
       <ul className={styles.footerNav}>
         <li>
           <a href="#" className={styles.footerLink}>Acerca de Nosotros</a>
@@ -18,7 +18,7 @@ const Footer = () => {
       </ul>
       {/* Seccion de Copyright */}
       <p className={styles.copyright}>
-        © {anioActual} One Piece. Todos los derechos reservados.
+        © {anioActual} Dayz Store. Todos los derechos reservados.
       </p>
     </footer>
   );

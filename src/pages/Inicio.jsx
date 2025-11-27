@@ -1,28 +1,14 @@
-import { useState } from 'react';
-import Productos from '../components/Productos';
-import Carrito from '../components/Carrito';
+import { useAuthContext } from "../context/AuthContext";
+import Productos from "../components/Productos";
 
 const Inicio = () => {
-  const [carrito, setCarrito] = useState([]);
+  const { agregarAlCarrito } = useAuthContext();
 
-  const agregarAlCarrito = (producto) => {
-    setCarrito([...carrito, producto]);   
-  };
-  // Usamos filter() para crear un nuevo array que excluye el elemento con el índice dado.
-  const eliminarDelCarrito = (indiceAEliminar) => {
-    setCarrito(carrito.filter((_, indice) => indice !== indiceAEliminar));
-  };
-
-  return(
+  return (
     <>
-      <Productos agregarProducto={agregarAlCarrito}/>
-      <hr/>
-      <Carrito 
-        productosEnCarrito={carrito}
-        productosEliminados={eliminarDelCarrito}
-      />
+      <Productos agregarProducto={agregarAlCarrito} />
     </>
   );
-}
+};
 
 export default Inicio;

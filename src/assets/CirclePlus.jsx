@@ -1,4 +1,4 @@
-const UserIcon = () => {
+const CirclePlus = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,12 +10,15 @@ const UserIcon = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-user-icon lucide-user"
+      className="lucide lucide-circle-plus-icon lucide-circle-plus"
     >
-      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-      <circle cx="12" cy="7" r="4" />
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M8 12h8"/>
+      <path d="M12 8v8"/>
     </svg>
+
+      
   );
 };
 
-export default UserIcon;
+export default CirclePlus;

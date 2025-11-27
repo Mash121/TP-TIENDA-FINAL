@@ -2,7 +2,7 @@ body {
   background-image: url("./assets/imagenes/backgroundstorez.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* opcional, para que quede fija */
+  background-attachment: fixed; 
   font-family: "Lucida Console", Courier, monospace;
   max-width: 70%;
   margin: 0 auto;

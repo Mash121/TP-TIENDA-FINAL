@@ -63,9 +63,14 @@
 
 /* --- Imagen del producto --- */
 .card-imagen {
-  height: 160px;
-  object-fit: contain;
+  width: 100%;             /* se ajusta al ancho de la tarjeta */
+  height: 160px;           /* mantiene una altura fija */
+  object-fit: contain;     /* mantiene proporciones sin recortar */
   margin-bottom: 15px;
+  border-radius: 10px;     /* opcional: bordes suaves */
+  display: block;
+  background-color: rgba(255, 255, 255, 0.2); /* fondo si hay transparencia */
+  overflow: hidden;        /* evita desbordes */
 }
 
 /* --- Título del producto --- */

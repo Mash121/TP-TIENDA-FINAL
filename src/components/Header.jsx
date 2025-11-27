@@ -1,43 +1,56 @@
-import NavBar from './Navbar';
+import Navbar from './Navbar';
 import styles from './Header.module.css';
-import UserIcon from '../assets/UserIcon';
-import BagIcon from '../assets/BagIcon';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { useAuthContext } from '../context/AuthContext.jsx';
+import { CarritoContext } from '../context/CarritoContext';
+import BagIcon from '../assets/BagIcon.jsx';
 
+const Header = () => {
+  const { usuario, logout } = useAuthContext();
+  const { carrito } = useContext(CarritoContext);
 
-// Se pide para la pre-entrega
-const Header = ({contadorEnCarrito = 5}) => {
+  const estaLogeado = !!usuario;
+  const contadorEnCarrito = carrito.length;
+
   return (
     <header className={styles.header}>
-      {/* Seccion Izquierda: Logo */}
+
       <div className={styles.logo}>
-        DayZstore
+        DayZ Store
       </div>
-      {/* Seccion Central: Componente NavBar */}
+
       <div className={styles.navbarContainer}>
-        <NavBar/>
+        <Navbar />
       </div>
-      {/* Seccion Derecha: Iconos */}
+
       <div className={styles.iconsContainer}>
-        {/* Icono de Usuario */}
-        <div className={styles.icono}>
-          <UserIcon />
-        </div>
-        {/* Icono de Carrito con Contador */}
+        
+        {estaLogeado ? (
+          <button onClick={logout} className={styles.login}>
+            Cerrar Sesión
+          </button>
+        ) : (
+          <Link to="/login">
+            <button className={styles.login}>Ingresá</button>
+          </Link>
+        )}
+
         <div className={styles.iconoDeCarrito}>
           <Link to="/carrito">
-          <BagIcon className={styles.icono} />
-          {/* Renderiza el contador solo si es mayor que 0 */}
-          {contadorEnCarrito > 0 && (
-            <span className={styles.contadorDeCarrito}>
-              {contadorEnCarrito}
-            </span>
-          )}
+            <BagIcon className={styles.icono} />
+
+            {contadorEnCarrito > 0 && (
+              <span className={styles.contadorDeCarrito}>
+                {contadorEnCarrito}
+              </span>
+            )}
+
           </Link>
-          
         </div>
+
       </div>
-    </header>   
+    </header>
   );
 };
 
